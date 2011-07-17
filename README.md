@@ -43,6 +43,11 @@ customization
 -------------
 
 These are the default styles and settings used by _eyes_.
+
+    pretty: true,             // Indent object literals
+    hideFunctions: false,     // Don't output functions at all
+    stream: process.stdout,   // Stream to write to, or null
+    maxLength: 2048,          // Truncate output if longer
     styles: {                 // Styles applied to stdout
         all:     'cyan',      // Overall style applied to everything
         label:   'underline', // Inspection labels, like 'array' in `array: [1, 2, 3]`
@@ -54,19 +59,15 @@ These are the default styles and settings used by _eyes_.
         number:  'magenta',
         bool:    'blue',      // true false
         regexp:  'green',     // /\d+/
-    },
-    pretty: true,             // Indent object literals
-    hideFunctions: false,     // Don't output functions at all
-    stream: process.stdout,   // Stream to write to, or null
-    maxLength: 2048           // Truncate output if longer
+    }
 
 You can overwrite them with your own, by passing a similar object to `inspector()` or `inspect()`.
 
     var inspect = require('eyes').inspector({
+        maxLength: 512,
         styles: {
             all: 'magenta',
             special: 'bold'
-        },
-        maxLength: 512
+        }
     });
 
