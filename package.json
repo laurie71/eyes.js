@@ -1,8 +1,9 @@
 {
   "name"          : "eyes",
   "description"   : "a customizable value inspector",
-  "url"           : "http://github.com/cloudhead/eyes.js",
   "keywords"      : ["inspector", "debug", "inspect", "print"],
+  "homepage"      : "http://github.com/cloudhead/eyes.js",
+  "repository"    : { "type" : "git", "url" : "https://github.com/cloudhead/eyes.js.git",
   "author"        : "Alexis Sellier <self@cloudhead.net>",
   "contributors"  : [],
   "licenses"      : ["MIT"],
@@ -11,4 +12,5 @@
   "version"       : "0.1.6",
   "directories"   : { "lib": "./lib", "test": "./test" },
   "engines"       : { "node": "> 0.1.90" }
+ }
 }
